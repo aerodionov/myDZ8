@@ -1,25 +1,19 @@
 package lessonClass_1_9;
 
-import com.sun.tools.javac.Main;
-
 
 public class App {
     public static void main(String[] args) {
-        Book myBook;
-        Book myBook2;
-        Author myAuthor1;
-        Author myAuthor2;
-        myAuthor1 = new Author("Лев", "Толстой");
-        myAuthor2 = new Author("Борис", "Полевой");
-        myBook = new Book("Война и мир", myAuthor1, 1991);
-        myBook2 = new Book("Повесть о настоящем человеке", myAuthor2, 1990);
-        System.out.println("myBook.getName() = " + myBook.getName());
-        System.out.println("myBook.getYearPublication() = " + myBook.getYearPublication());
-        System.out.println("myBook.getAuthorName() = " + myBook.getAuthorName());
-        System.out.println("myBook.getAuthorSurname() = " + myBook.getAuthorSurname());
+        Author leoTolstoy  = new Author("Лев", "Толстой");
+        Author borisPolevoy = new Author("Борис", "Полевой");
+        Book warAndPeace = new Book("Война и мир", leoTolstoy, 1991);
+        Book storyAboutRealMan = new Book("Повесть о настоящем человеке", borisPolevoy, 1990);
+        System.out.println("myBook.getName() = " + warAndPeace.getName());
+        System.out.println("myBook.getYearPublication() = " + warAndPeace.getYearPublication());
+        System.out.println("myBook.getAuthorName() = " + warAndPeace.getAuthor().getNameAuthor());
+        System.out.println("myBook.getAuthorSurname() = " + warAndPeace.getAuthor().getSurnameAuthor());
 
-        myBook.setYearPublication(2000);
-        System.out.println("myBook.getYearPublication() = " + myBook.getYearPublication());
+        warAndPeace.setYearPublication(2000);
+        System.out.println("myBook.getYearPublication() = " + warAndPeace.getYearPublication());
 
     }
 }
