@@ -16,4 +16,19 @@ public class Author {
     public String getSurnameAuthor() {
         return surnameAuthor;
     }
+
+    @Override
+    public String toString() {
+        return nameAuthor + " " + surnameAuthor;
+    }
+
+    public Boolean equals(Author author) {
+        return this.nameAuthor.equals(author.nameAuthor) && this.surnameAuthor.equals(author.surnameAuthor);
+    }
+
+    public int hashCode() {
+        return this.nameAuthor.hashCode() + this.surnameAuthor.hashCode();
+    }
+
+
 }
